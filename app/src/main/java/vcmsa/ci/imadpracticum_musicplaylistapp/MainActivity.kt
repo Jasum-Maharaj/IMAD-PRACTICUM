@@ -38,7 +38,13 @@ class MainActivity : AppCompatActivity() {
         val edtEnterSongTitle = findViewById<TextView>(R.id.edtEnterSongTitle)
         val edtArtistName = findViewById<TextView>(R.id.edtArtistName)
         val edtComment = findViewById<TextView>(R.id.edtComment)
+        val txtDisplaySongInfo = findViewById<TextView>(R.id.txtDisplaySongInfo)
         val edtRating = findViewById<TextView>(R.id.edtRating)
+
+        fun DisplaySongInfo() {
+            //display the song information
+         txtDisplaySongInfo.text = ""
+        }
 
         edtComment.setOnClickListener {
             //check if the comment is not empty
@@ -71,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
-            val txtDisplaySongInfo = findViewById<TextView>(R.id.txtDisplaySongInfo)
+
             val btnAddToPlaylist = findViewById<Button>(R.id.btnAddToPlaylist)
 
             btnAddToPlaylist.setOnClickListener {
@@ -80,9 +86,16 @@ class MainActivity : AppCompatActivity() {
                     && edtRating.text.toString().toInt() == rating[index]
                     && edtComment.text.toString() ==comments[index]) {
                     //display the song information
-                    txtDisplaySongInfo.text = "Song successfully added to playlist"
+                    DisplaySongInfo()
+                    val intent = Intent(this, MainActivity2::class.java)
+                    intent.putExtra("Song", Song[index]);
+                    intent.putExtra("Artist", Artist[index]);
+                    intent.putExtra("Rating", rating[index]);
+                    intent.putExtra("Comment", comments[index])
+                    startActivity(intent)
+                    //txtDisplaySongInfo.text = "Song successfully added to playlist"
                 } else {
-                   txtDisplaySongInfo.text = "Song not found. Please fill out all fields"
+                 DisplaySongInfo()
                 }
             }
         }

@@ -7,4 +7,92 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="644dp"
+        android:layout_height="850dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502"
+        app:srcCompat="@drawable/backgrounds2" />
+
+    <TextView
+        android:id="@+id/txtDisplay"
+        android:layout_width="395dp"
+        android:layout_height="182dp"
+        android:background="#E2C986"
+        android:backgroundTint="#E2C986"
+        android:gravity="center"
+        android:hint="Song information will appear here"
+        android:textColor="#022A6F"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <Button
+        android:id="@+id/btnExitApp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#E2C986"
+        android:text="EXIT APP"
+        android:textColor="#022A6F"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856" />
+
+    <Button
+        android:id="@+id/btnDisplaySongs"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#E2C986"
+        android:text="Display songs"
+        android:textColor="#022A6F"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:id="@+id/btnAvgRating"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#E2C986"
+        android:text="Average Rating"
+        android:textColor="#022A6F"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <Button
+        android:id="@+id/btnReturnToScreen1"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#E2C986"
+        android:text="Return to main screen"
+        android:textColor="#022A6F"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.739" />
 </androidx.constraintlayout.widget.ConstraintLayout>
