@@ -37,13 +37,13 @@ class MainActivity2 : AppCompatActivity() {
         val txtDisplay = findViewById<TextView>(R.id.txtDisplay)
 
        btnDisplaySongs.setOnClickListener {
-           while (index <= 4) {
+           while (index < 5) {
                txtDisplay.text =
                    "song: " + Song[index] +
                            " Artist: " + Artist[index] +
                            " Rating: " + rating[index] +
                            " Comment: " + comments[index]
-
+               index++
            }
        }
       btnAvgRating.setOnClickListener {
