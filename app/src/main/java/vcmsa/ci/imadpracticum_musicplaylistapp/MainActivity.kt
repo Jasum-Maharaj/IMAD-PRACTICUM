@@ -14,10 +14,10 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     //arrays to store singer,song,ratings and comments
-    private val Song = arrayOf("Blue Suede Shoes", "Dancing Queen", "Unwritten", "Lover")
-    private val Artist = arrayOf("Elvis Presley", "ABBA", "Natasha Bedingfield", "Taylor Swift")
-    private val rating = arrayOf(5, 4, 3, 5)
-    private val comments = arrayOf("Nostalgic", "Absolute classic", "Good song", "Best love song")
+    private val Song = arrayOf("song1", "song2", "song3", "song4")
+    private val Artist = arrayOf("singer1","singer2","singer3","singer4")
+    private val rating = arrayOf(0, 0, 0, 0)
+    private val comments = arrayOf("com1", "com2", "com3", "com4")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,21 +81,15 @@ class MainActivity : AppCompatActivity() {
             val btnAddToPlaylist = findViewById<Button>(R.id.btnAddToPlaylist)
 
             btnAddToPlaylist.setOnClickListener {
-                if (edtEnterSongTitle.text.toString() ==  Song[index]
-                    && edtArtistName.text.toString() == Artist[index]
-                    && edtRating.text.toString().toInt() == rating[index]
-                    && edtComment.text.toString() ==comments[index]) {
+                if (edtEnterSongTitle.text.toString() ==  ""
+                    && edtArtistName.text.toString() == ""
+                    && edtRating.text.toString().toInt().toString() == ""
+                    && edtComment.text.toString() == "") {
                     //display the song information
-                    DisplaySongInfo()
-                    val intent = Intent(this, MainActivity2::class.java)
-                    intent.putExtra("Song", Song[index]);
-                    intent.putExtra("Artist", Artist[index]);
-                    intent.putExtra("Rating", rating[index]);
-                    intent.putExtra("Comment", comments[index])
-                    startActivity(intent)
-                    //txtDisplaySongInfo.text = "Song successfully added to playlist"
+                    txtDisplaySongInfo.text = "Song unsuccessfully added to playlist"
                 } else {
-                 DisplaySongInfo()
+                 txtDisplaySongInfo.text = "Song successfully added to playlist"
+                    index++
                 }
             }
         }
